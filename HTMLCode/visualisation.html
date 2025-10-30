@@ -11,7 +11,7 @@
         body {
             font-size: 14px;
         }
-        .v3376_31 {
+        .v3376_31 { /*Background 1*/
             width: 100%;
             height: 100%;
             background: url("./images/v3376_31.png");
@@ -26,7 +26,7 @@
             z-index: 0;
             pointer-events: none;
         }
-        .v3359_2 {
+        .v3359_2 { /*Background 2*/
             width: 100%;
             height: 100%;
             background: url("./images/v3359_2.png");
@@ -41,7 +41,7 @@
             z-index: 1;
             pointer-events: none;
         }
-        .v3376_30 {
+        .v3376_30 { /*Title*/
             width: 839px;
             color: rgba(0,0,0,1);
             position: absolute;
@@ -54,7 +54,7 @@
             text-align: left;
             z-index: 10;
         }
-        .v3376_32 {
+        .v3376_32 { /*Subtitle*/
             width: 100%;
             color: rgba(0,0,0,1);
             position: absolute;
@@ -63,6 +63,43 @@
             font-family: Inter;
             font-weight: 600;
             font-size: 64px;
+            opacity: 1;
+            text-align: left;
+            z-index: 10;
+        }
+        .v3376_34 { /*Timeline*/
+            width: 80%;
+            height: 100px; 
+            background-image: url("./images/line.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            opacity: 1;
+            position: absolute;
+            top: 498px;
+            left: 132px;
+            z-index: 10;
+        }
+        .v3388_3 { /*First circle on timeline*/
+            width: 30px;
+            height: 30px;
+            background: rgba(0,0,0,1);
+            opacity: 1;
+            position: absolute;
+            top: 532px;
+            left: 400px;
+            border-radius: 50%;
+            z-index: 10;
+        }
+        .v3388_4 { /*Year*/
+            width: 96px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 565px;
+            left: 372px;
+            font-family: Inter;
+            font-weight: 400;
+            font-size: 40px;
             opacity: 1;
             text-align: left;
             z-index: 10;
@@ -78,6 +115,9 @@
     <h1 class="v3376_30">Visualisation</h1>
     <h2 class="v3376_32">this page contains tree visuals for Hackathon</h2>
     <div id="main"></div>
+    <div class="v3376_34"></div>
+    <div class="v3388_3"></div>
+    <div class="v3388_4">1990</div>
     <script src = "main.js">
     </script>
 </body>
