@@ -2,7 +2,6 @@ async function loadTimelineData() {
   const response = await fetch("./data/data.json");
   const rawData = await response.json();
 
-  // Convert data into usable structure
   const years = [];
   const options = [];
 
@@ -13,8 +12,6 @@ async function loadTimelineData() {
     const messages = phrases[word];
 
     years.push(year);
-
-    // Create a tree-like structure for this year
     const data = {
       name: year,
       children: [
@@ -36,7 +33,7 @@ async function loadTimelineData() {
           data: [data],
           top: '5%',
           left: '15%',
-          bottom: '5%',
+          bottom: '20%',  // Увеличено, чтобы освободить место для таймлайна внизу
           right: '15%',
           symbolSize: 12,
           label: {
@@ -66,8 +63,12 @@ async function loadTimelineData() {
       timeline: {
         axisType: 'category',
         data: years,
+        bottom: '0%',      // Размещает таймлайн внизу
+        left: '10%',       // Отступы слева
+        right: '10%',      // Отступы справа
         label: {
-          color: '#333'
+          color: '#333',
+          formatter: '{value}'  // Показывает только значение (год)
         }
       },
       tooltip: {},
